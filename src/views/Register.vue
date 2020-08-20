@@ -6,7 +6,7 @@
       <router-link to="/chat">Chat</router-link>
     </div>
     <div class="light">
-      <div class="pageWrapper" v-if="!loader">
+      <div class="pageWrapper">
         <div class="input-form">
           <form v-on:submit.prevent="registerAppUser">
             <h3>Create an Account</h3>
@@ -36,17 +36,12 @@
           </form>
         </div>
       </div>
-      <Loader v-else-if="loader" />
     </div>
   </div>
 </template>
 
 <script>
-import Loader from "../lib/cometchat-components/components/Loader";
 export default {
-  components: {
-    Loader,
-  },
   data() {
     return {
       username: "",

@@ -7,7 +7,7 @@
     </div>
 
     <div class="light">
-      <div class="pageWrapper" v-if="!loader">
+      <div class="pageWrapper">
         <div class="input-form">
           <form v-on:submit.prevent="authLoginAppUser">
             <h3>Hello!</h3>
@@ -45,18 +45,13 @@
           </form>
         </div>
       </div>
-      <Loader v-else-if="loader" />
     </div>
   </div>
 </template>
 
 <script>
 import { CometChat } from "@cometchat-pro/chat";
-import Loader from "../lib/cometchat-components/components/Loader";
 export default {
-  components: {
-    Loader,
-  },
   data() {
     return {
       username: "",
